@@ -2,3 +2,5 @@ github.com/go-ruby-observer/observer v0.0.0-20260630080708-c3a02da51f79 h1:xZIEc
 github.com/go-ruby-observer/observer v0.0.0-20260630080708-c3a02da51f79/go.mod h1:QvbIKqCHbVYFCko+ZlLGzFh6h/K7pqSKGzADrzTUvls=
 github.com/go-ruby-observer/observer v0.0.0-20260709090026-cd0b6814bd17 h1:wrB/8IVPZoH2sj/bRD5L4QSGFSOJM13l6KQEYSGZ4zM=
 github.com/go-ruby-observer/observer v0.0.0-20260709090026-cd0b6814bd17/go.mod h1:QvbIKqCHbVYFCko+ZlLGzFh6h/K7pqSKGzADrzTUvls=
+github.com/go-ruby-observer/observer v0.0.0-20260820220157-5e26c6317a28 h1:9Iiv/i4gMlFiWyJ1ltuX3mvFnaAnnL4/vyIbougjbNw=
+github.com/go-ruby-observer/observer v0.0.0-20260820220157-5e26c6317a28/go.mod h1:QvbIKqCHbVYFCko+ZlLGzFh6h/K7pqSKGzADrzTUvls=
