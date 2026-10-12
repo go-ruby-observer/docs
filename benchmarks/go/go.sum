@@ -4,3 +4,5 @@ github.com/go-ruby-observer/observer v0.0.0-20260709090026-cd0b6814bd17 h1:wrB/8
 github.com/go-ruby-observer/observer v0.0.0-20260709090026-cd0b6814bd17/go.mod h1:QvbIKqCHbVYFCko+ZlLGzFh6h/K7pqSKGzADrzTUvls=
 github.com/go-ruby-observer/observer v0.0.0-20260820220157-5e26c6317a28 h1:9Iiv/i4gMlFiWyJ1ltuX3mvFnaAnnL4/vyIbougjbNw=
 github.com/go-ruby-observer/observer v0.0.0-20260820220157-5e26c6317a28/go.mod h1:QvbIKqCHbVYFCko+ZlLGzFh6h/K7pqSKGzADrzTUvls=
+github.com/go-ruby-observer/observer v0.0.0-20261011002010-5d963ebd3b00 h1:z0NaKJxrSti60YpOdWkQo+2w6sukgcVy5KkghpsQN0U=
+github.com/go-ruby-observer/observer v0.0.0-20261011002010-5d963ebd3b00/go.mod h1:FBL/J/Bt3IRpe++vei2o6kxbUIzoiYO7PqIieXMqvSc=
