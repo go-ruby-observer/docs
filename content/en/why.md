@@ -1,4 +1,9 @@
-# Why pure Go
+---
+title: "Why pure Go"
+weight: 20
+---
+
+# Why pure Go {#why-pure-go}
 
 `go-ruby-observer/observer` reimplements the registry behind Ruby's `Observable`
 mixin in **pure Go, with cgo disabled**. The slice of Ruby it covers is
@@ -8,7 +13,7 @@ decision of *whether* to notify — is a pure function of the calls made to it. 
 live binding, no evaluation of arbitrary Ruby. That is exactly the part that can —
 and should — live as a standalone Go library, separate from the interpreter.
 
-## Owns the registry, not the dispatch
+## Owns the registry, not the dispatch {#owns-the-registry-not-the-dispatch}
 
 The clean seam is between **deciding** and **doing**:
 
@@ -26,7 +31,7 @@ interpreter**. Responsiveness (`respond_to?`) is likewise injected as a
 caller-supplied callback, so even the `add_observer`-raises-on-non-responding
 behaviour is reproduced without the package knowing what an interpreter is.
 
-## Why pure Go matters here
+## Why pure Go matters here {#why-pure-go-matters-here}
 
 Because the library is CGO-free and dependency-free, it:
 
@@ -40,5 +45,5 @@ Because the library is CGO-free and dependency-free, it:
   while the cross-arch lanes (where `ruby` is absent) still validate the library
   itself via its deterministic tests.
 
-See [Usage & API](api.md) for the surface and [Roadmap](roadmap.md) for what is
+See [Usage & API]({{< relref "api.md" >}}) for the surface and [Roadmap]({{< relref "roadmap.md" >}}) for what is
 in scope.

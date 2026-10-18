@@ -1,4 +1,9 @@
-# go-ruby-observer documentation
+---
+title: "Home"
+weight: 10
+---
+
+# go-ruby-observer documentation {#go-ruby-observer-documentation}
 
 **Ruby's `Observable` mixin — the observer registry and changed flag — in pure Go, MRI-compatible, no cgo.**
 
@@ -20,10 +25,13 @@ it, binding this module as a native module just like
 delegated to a caller-supplied callback, so the package has **no dependency on
 any interpreter**.
 
-!!! success "Status: complete — MRI-faithful"
-    The full `Observable` registry surface — `AddObserver` / `DeleteObserver` / `DeleteObservers` / `CountObservers` / `Changed` / `ChangedQ` / `NotifyObservers` — with insertion-order notification, the re-add-keeps-position rule, the `*NotRespondingError` carrying MRI's verbatim message, and the no-op-when-unchanged / notify-then-reset lifecycle. Verified against the system `ruby -robserver` at 100% coverage, `gofmt` + `go vet` clean, CI green across the six 64-bit Go targets and three OSes.
+{{< callout type="info" >}}
+**Status: complete — MRI-faithful**
 
-## Quick taste
+The full `Observable` registry surface — `AddObserver` / `DeleteObserver` / `DeleteObservers` / `CountObservers` / `Changed` / `ChangedQ` / `NotifyObservers` — with insertion-order notification, the re-add-keeps-position rule, the `*NotRespondingError` carrying MRI's verbatim message, and the no-op-when-unchanged / notify-then-reset lifecycle. Verified against the system `ruby -robserver` at 100% coverage, `gofmt` + `go vet` clean, CI green across the six 64-bit Go targets and three OSes.
+{{< /callout >}}
+
+## Quick taste {#quick-taste}
 
 ```go
 import "github.com/go-ruby-observer/observer"
@@ -44,7 +52,7 @@ if ok {
 // r.ChangedQ() == false now
 ```
 
-## The MRI mapping
+## The MRI mapping {#the-mri-mapping}
 
 | MRI `Observable` | this package |
 | --- | --- |
@@ -56,7 +64,7 @@ if ok {
 | `changed?` | `Registry.ChangedQ` |
 | `notify_observers(*args)` | `Registry.NotifyObservers` |
 
-## Repositories
+## Repositories {#repositories}
 
 | Repo | What it is |
 | --- | --- |
@@ -65,7 +73,7 @@ if ok {
 | [`go-ruby-observer.github.io`](https://github.com/go-ruby-observer/go-ruby-observer.github.io) | the organization landing page (Hugo) |
 | [`brand`](https://github.com/go-ruby-observer/brand) | logo and brand assets |
 
-## Principles
+## Principles {#principles}
 
 - **Pure Go, `CGO_ENABLED=0`** — trivial cross-compilation, a single static
   binary, no C toolchain.
@@ -79,11 +87,11 @@ if ok {
 - **100% test coverage** is the target, enforced as a CI gate, across 6 arches
   and 3 OSes.
 
-## Where to go next
+## Where to go next {#where-to-go-next}
 
-- [Why pure Go](why.md) — why the registry state is deterministic enough to live
+- [Why pure Go]({{< relref "why.md" >}}) — why the registry state is deterministic enough to live
   as a standalone, interpreter-independent Go library.
-- [Usage & API](api.md) — the public surface and worked examples.
-- [Roadmap](roadmap.md) — what is done and what is downstream by design.
+- [Usage & API]({{< relref "api.md" >}}) — the public surface and worked examples.
+- [Roadmap]({{< relref "roadmap.md" >}}) — what is done and what is downstream by design.
 
 Source lives at [github.com/go-ruby-observer/observer](https://github.com/go-ruby-observer/observer).
