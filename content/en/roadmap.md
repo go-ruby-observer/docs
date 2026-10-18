@@ -1,4 +1,9 @@
-# Roadmap
+---
+title: "Roadmap"
+weight: 40
+---
+
+# Roadmap {#roadmap}
 
 `go-ruby-observer/observer` is grown **test-first**, each capability verified
 against MRI's `Observable` (`ruby -robserver`) rather than built in isolation.
@@ -14,7 +19,7 @@ changed flag — is **complete**.
 | `respond_to?` & raise semantics | Responsiveness delegated to a caller-supplied `RespondTo`; `AddObserver` of a non-responding method returns `*NotRespondingError` with MRI's verbatim ``observer does not respond to `update'`` message. | **Done** |
 | MRI verification & coverage | Behaviour pinned against the system `ruby -robserver` (Ruby 4.0.5); 100% coverage, gofmt + go vet clean, green across all six 64-bit Go arches and three OSes. | **Done** |
 
-## Documented out-of-scope boundaries
+## Documented out-of-scope boundaries {#documented-out-of-scope-boundaries}
 
 These are **deliberate**, recorded so the module's surface is unambiguous:
 
@@ -30,5 +35,5 @@ These are **deliberate**, recorded so the module's surface is unambiguous:
 - **Reference is reference Ruby (MRI).** Conformance targets MRI's behaviour, as
   pinned by the verification against `ruby -robserver`.
 
-See [Usage & API](api.md) for the surface and [Why pure Go](why.md) for the
+See [Usage & API]({{< relref "api.md" >}}) for the surface and [Why pure Go]({{< relref "why.md" >}}) for the
 registry/dispatch split.

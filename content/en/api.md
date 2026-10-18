@@ -1,4 +1,9 @@
-# Usage & API
+---
+title: "Usage & API"
+weight: 30
+---
+
+# Usage & API {#usage-api}
 
 The public API lives at the module root (`github.com/go-ruby-observer/observer`).
 It is **Ruby-shaped but Go-idiomatic**: the `Registry` methods mirror
@@ -6,16 +11,19 @@ It is **Ruby-shaped but Go-idiomatic**: the `Registry` methods mirror
 surface follows Go conventions — explicit `error` values, an opaque comparable
 observer type, no global state.
 
-!!! success "Status: implemented"
-    The library is built and importable as `github.com/go-ruby-observer/observer`, bound into `rbgo` as a native module; see [Roadmap](roadmap.md).
+{{< callout type="info" >}}
+**Status: implemented**
 
-## Install
+The library is built and importable as `github.com/go-ruby-observer/observer`, bound into `rbgo` as a native module; see [Roadmap]({{< relref "roadmap.md" >}}).
+{{< /callout >}}
+
+## Install {#install}
 
 ```sh
 go get github.com/go-ruby-observer/observer
 ```
 
-## Worked example
+## Worked example {#worked-example}
 
 ```go
 import "github.com/go-ruby-observer/observer"
@@ -37,7 +45,7 @@ if ok {
 // r.ChangedQ() == false now (notify reset the flag)
 ```
 
-## Shape
+## Shape {#shape}
 
 ```go
 // DefaultFunc is the method Observable#add_observer uses by default (":update").
@@ -69,7 +77,7 @@ func (r *Registry) ChangedQ() bool
 func (r *Registry) NotifyObservers(args ...any) (entries []Entry, notifyArgs []any, ok bool)
 ```
 
-## MRI-faithful semantics
+## MRI-faithful semantics {#mri-faithful-semantics}
 
 - **Insertion order.** Observers notify in the order they were added (MRI's
   Hash-keyed store). Re-adding an existing observer updates its method and keeps
@@ -85,7 +93,7 @@ func (r *Registry) NotifyObservers(args ...any) (entries []Entry, notifyArgs []a
   `args` echoed back unchanged) and then resets `changed?` to false. Use `ok`
   rather than `len(entries)` for the notify decision.
 
-## Relationship to Ruby
+## Relationship to Ruby {#relationship-to-ruby}
 
 `go-ruby-observer/observer` is **standalone and reusable**, and is the backend
 bound into [go-embedded-ruby](https://github.com/go-embedded-ruby/ruby) by `rbgo`
